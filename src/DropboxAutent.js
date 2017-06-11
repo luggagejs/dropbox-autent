@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { WebView } from 'react-native'
 import TokenStorage from './TokenStorage'
 
-const DropboxAutent = ({appKey, returnUrl}) => WrappedComponent => (
+const DropboxAutent = ({apiKey, redirectUrl}) => WrappedComponent => (
   class App extends Component {
     static dropboxUrl = `https://www.dropbox.com/1/oauth2/authorize\
 ?response_type=token\
-&client_id=${appKey}\
-&redirect_uri=${returnUrl}`
+&client_id=${apiKey}\
+&redirect_uri=${redirectUrl}`
 
     state = {
       token: ''
