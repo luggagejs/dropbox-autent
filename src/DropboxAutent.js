@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { WebView } from 'react-native'
 import TokenStorage from './TokenStorage'
+import webViewStyle from './style'
 
 const DropboxAutent = ({apiKey, redirectUrl}) => WrappedComponent => (
+
   class App extends Component {
     static dropboxUrl = `https://www.dropbox.com/1/oauth2/authorize\
 ?response_type=token\
@@ -58,6 +60,7 @@ const DropboxAutent = ({apiKey, redirectUrl}) => WrappedComponent => (
             onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
             // for Andriod
             onNavigationStateChange={this.onShouldStartLoadWithRequest}
+            style={webViewStyle.webview}
           />
       )
     }
