@@ -55,6 +55,7 @@ const DropboxAutent = ({apiKey, redirectUrl}) => WrappedComponent => (
             ref={(webview) => {
               this.webview = webview
             }}
+            startInLoadingState={true}
             source={{uri: App.dropboxUrl}}
             // for iOS
             onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
