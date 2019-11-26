@@ -62,6 +62,7 @@ const DropboxAutent = ({apiKey, redirectUrl}) => WrappedComponent => (
             // for Andriod
             onNavigationStateChange={this.onShouldStartLoadWithRequest}
             style={webViewStyle.webview}
+            useWebKit={true}
           />
       )
     }
