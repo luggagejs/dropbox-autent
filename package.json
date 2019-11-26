@@ -1,6 +1,6 @@
 {
   "name": "dropbox-autent",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Authenticate with Dropbox in React Native",
   "main": "index.js",
   "scripts": {
