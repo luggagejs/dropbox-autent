@@ -1,9 +1,5 @@
-/**
- * @format
- */
-
-import {AppRegistry} from 'react-native';
-import App from './App';
+import React, { AppRegistry } from 'react-native';
+import WithDropboxAutent from './src/components/index';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => WithDropboxAutent)

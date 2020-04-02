@@ -7,8 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
+    "@luggage/core": "^2.0.1",
+    "@luggage/react-luggage-redux": "^1.0.18",
+    "dropbox-autent": "github:luggagejs/dropbox-autent#0.0.2",
+    "luggage": "github:luggagejs/luggage#2.1.2",
+    "prop-types": "^15.7.2",
     "react": "16.8.3",
-    "react-native": "0.59.5"
+    "react-native": "0.59.5",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
