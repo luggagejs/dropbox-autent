@@ -5,7 +5,7 @@ import { fetchCollection, addRecord } from '@luggage/react-luggage-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { StyleSheet, View, Text, TextInput } from 'react-native'
+import { StyleSheet, View, Button, Text, TextInput } from 'react-native'
 
 const mapStateToProps = state => ({
   todos: state.luggage.collections.todos
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     height: null,
     flex: 1,
     flexDirection: 'column',
-    marginTop: 20,
     padding: 10,
+    paddingTop: 60,
     width: null
   },
   input: {
@@ -72,6 +72,10 @@ class TodoList extends Component {
 
     return (
       <View style={styles.body}>
+        <Button
+          title="Back to Login"
+          onPress={() => this.props.navigation.navigate('Login')}
+        />
         <TextInput style={styles.input}
           placeholder="New todo"
           returnKeyType="go"
