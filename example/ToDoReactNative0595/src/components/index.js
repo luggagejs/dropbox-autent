@@ -14,11 +14,11 @@ import TodoList from './TodoList'
 
 const API_KEY = 'tqx0ze13xl6vawf'
 
-const WithDropboxAutent = DropboxAutent({apiKey: API_KEY, redirectUrl: 'oauth2todo://foo'})(TodoList)
+const TodoListWithDropboxAutent = DropboxAutent({apiKey: API_KEY, redirectUrl: 'oauth2todo://foo'})(TodoList)
 
 const SwitchNavigator = createSwitchNavigator({
   Login: { screen: Login },
-  TodoList: { screen: TodoList }
+  TodoList: { screen: TodoListWithDropboxAutent }
 }, {
   initialRouteName: 'Login'
 })
