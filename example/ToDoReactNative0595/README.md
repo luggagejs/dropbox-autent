@@ -10,11 +10,10 @@ Login with external browser
 Add linking to your project:
 https://reactnative.dev/docs/0.59/linking#openurl
 
-###iOS
-
-Add in `info.plist` information about you redirect url.
+Add information about you redirect url.
 For example, for url `oauth2todo://foo` it will be:
 
+iOS: update `ios/info.plist`
 ```
 	<key>CFBundleURLTypes</key>
 	<array>
@@ -29,4 +28,14 @@ For example, for url `oauth2todo://foo` it will be:
 			</array>
 		</dict>
 	</array>
+```
+
+Android: update `android/app/src/main/AndroidManifest.xml`
+```
+  <intent-filter android:label="filter_react_native">
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme="oauth2todo" android:host="foo" /> // A
+  </intent-filter>
 ```
